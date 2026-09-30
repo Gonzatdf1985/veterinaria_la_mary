@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Veterinaria La Mary</title>
 
-
-  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/style.css">
   <style>
-    
+
   </style>
 </head>
 
 <body>
   <!-- inicio header -->
-  <header>
+  <!-- <header>
     <div class="hero">
 
       <nav class="contenedor">
@@ -29,9 +27,7 @@
                   alt="Logo veterinaria La Mary"></a></li>
 
           </div>
-          <!-- <div class="logo-contenedor">
-            <li class="menu__items"><img class="menu__perrito" src="./img/pngwing.com.webp" alt="perrito"></li>
-          </div> -->
+          
 
 
           <div class="list-container reset-list">
@@ -49,157 +45,296 @@
         </ul>
       </nav>
     </div>
-  </header>
+  </header> -->
+<nav class="navbar navbar-expand-md nav-bar-custom">
+  <div class="container-fluid list-container menu">
+    <a class="navbar-brand" href="#"><img src="./icons/logo_light.png" alt="logo" class="menu__logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 list-container">
+        <li class="nav-item">
+          <a class="nav-link active menu__link" aria-current="page" href="/">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link menu__link" href="./institucional.html">
+            Institucional
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link menu__link" href="./contacto.html">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link menu__link" href="./turno.html">Turno</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
   <!-- fin header -->
 
-  <!--portada-->
+<body>
+  <!-- Portada -->
   <section>
-    <img src="img/img.perrito_optimizado.webp" alt="Imagen de un perrito" class="imagen-hero">
+    <img src="img/img.perrito_optimizado.webp" alt="Imagen de un perrito"
+  class="portada w-100 d-block object-fit-cover imagen-hero">
+
   </section>
-
-
-
-  <!--tarjetitas de servicios -->
-
-  <section class="servicios" id="servicios">
-    <h2 class="h2-servicios"> Nuestros servicios</h2>
-
-    <ul class="grid-servicios-index">
-      <li class="tarjeta-flex">
-        <img src="img/consultas.webp" alt="Consultas" width="90" height="90">
-        <p>Consultas</p>
+  
+  <!-- tarjetitas de servicios -->
+  <section class="text-center py-4 px-3 mt-3 mb-5" id="servicios">
+    <h2 class="my-4">Nuestros servicios</h2>
+    <ul class="d-flex flex-wrap justify-content-center gap-4 list-unstyled">
+      <li class="tarjeta bg-white rounded-3 py-4 px-3 border-start border-4">
+        <img src="img/consultas.webp" alt="consultas" width="90" height="90" class="d-block mx-auto mb-2">
+        <p class="mb-0">Consultas</p>
       </li>
-      <li class="tarjeta-flex">
-        <img src="img/vacunacion.webp" alt="vacunacion" width="90" height="90">
-        <p>Vacunación</p>
+      <li class="tarjeta bg-white rounded-3 py-4 px-3 border-start border-4">
+        <img src="img/vacunacion.webp" alt="vacunacion" width="90" height="90" class="d-block mx-auto mb-2">
+        <p class="mb-0">Vacunación</p>
       </li>
-      <li class="tarjeta-flex">
-        <img src="img/cirugia.webp" alt="cirugia" width="90" height="90">
-        <p>Cirugía</p>
+      <li class="tarjeta bg-white rounded-3 py-4 px-3 border-start border-4">
+        <img src="img/cirugia.webp" alt="cirugia" width="90" height="90" class="d-block mx-auto mb-2">
+        <p class="mb-0">Cirugía</p>
       </li>
-      <li class="tarjeta-flex">
-        <img src="img/urgencias.webp" alt="urgencias" width="90" height="90">
-        <p>Urgencias</p>
+      <li class="tarjeta bg-white rounded-3 py-4 px-3 border-start border-4">
+        <img src="img/urgencias.webp" alt="urgencias" width="90" height="90" class="d-block mx-auto mb-2">
+        <p class="mb-0">Urgencias</p>
       </li>
-      <li class="tarjeta-flex">
-        <img src="img/internacion.webp" alt="internacion" width="90" height="90">
-        <p>Internación</p>
+      <li class="tarjeta bg-white rounded-3 py-4 px-3 border-start border-4">
+        <img src="img/internacion.webp" alt="internacion" width="90" height="90" class="d-block mx-auto mb-2">
+        <p class="mb-0">Internación</p>
       </li>
     </ul>
   </section>
 
+  <hr class="mx-auto w-75">
 
-  <!--texto encuadrado -->
-  <hr>
-  <div class="texto-equipo" id="equipo">
-    <p>
-    <h2> <strong>Somos un equipo de profesionales</strong> dedicados
+  <!-- Texto de la vete -->
+  <div class="texto-equipo mx-auto my-5 p-4 bg-white text-center shadow border-top border-bottom border-3" id="equipo">
+    <h2 class="fs-4 fw-normal my-3">
+      <strong>Somos un equipo de profesionales</strong> dedicados
       al cuidado y bienestar de perros y gatos. Trabajamos con atención personalizada,
-      compromiso y mucho cariño por nuestros pacientes. </h2>
-    </p>
+      compromiso y mucho cariño por nuestros pacientes.
+    </h2>
   </div>
-  <hr>
 
-  <!--fotos de pacientes -->
-  <div class="pacientes" id="pacientes">
-    <h2 class="center">Algunos de nuestros pacientes</h2>
-    <div class="galeria">
-      <img src="img/sr_bigote.webp" alt="Sr.Bigote">
-      <img src="img/inti.webp" alt="Inti">
-      <img src="img/lula.webp" alt="Lula">
-      <img src="img/sara.webp" alt="Sara">
-      <img src="img/milo.webp" alt="Milo">
-      <img src="img/lola.webp" alt="Lola">
-    </div>
-    <hr>
-    <div class="cuidado center" id="cuidado">
-      <p> <strong>
-          <h4>Cuidado veterinario para tu mascota, desde hace 10 años.</h4>
-        </strong> </p>
-    </div>
+  <hr class="mx-auto w-75">
 
-    <hr>
+  <!-- carrusel de nuestras mascotas -->
+<div id="carruselPacientes" class="carousel slide mx-auto shadow rounded-4 overflow-hidden" style="max-width: 700px;" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carruselPacientes" data-bs-slide-to="0" class="active" aria-label="Foto 1"></button>
+    <button type="button" data-bs-target="#carruselPacientes" data-bs-slide-to="1" aria-label="Foto 2"></button>
+    <button type="button" data-bs-target="#carruselPacientes" data-bs-slide-to="2" aria-label="Foto 3"></button>
+    <button type="button" data-bs-target="#carruselPacientes" data-bs-slide-to="3" aria-label="Foto 4"></button>
+    <button type="button" data-bs-target="#carruselPacientes" data-bs-slide-to="4" aria-label="Foto 5"></button>
+    <button type="button" data-bs-target="#carruselPacientes" data-bs-slide-to="5" aria-label="Foto 6"></button>
   </div>
-  <!-- inicio footer -->
-  <footer>
 
-    <section class="footer__container contenedor">
+  <div class="carousel-inner">
+    <div class="carousel-item active ratio ratio-4x3">
+      <img src="img/nuestros.1.png" class="d-block w-80 h-100 object-fit-cover" alt="Sr Bigotes">
+      <div class="carousel-caption"><p class="mb-0">Sr Bigotes</p></div>
+    </div>
+    <div class="carousel-item ratio ratio-4x3">
+      <img src="img/nuestros.2.png" class="d-block w-80 h-100 object-fit-cover" alt="Inti">
+      <div class="carousel-caption"><p class="mb-0">Inti</p></div>
+    </div>
+    <div class="carousel-item ratio ratio-4x3">
+      <img src="img/nuestros.3.png" class="d-block w-80 h-100 object-fit-cover" alt="Lula">
+      <div class="carousel-caption"><p class="mb-0">Lula</p></div>
+    </div>
+    <div class="carousel-item ratio ratio-4x3">
+      <img src="img/nuestros.4.png" class="d-block w-80 h-100 object-fit-cover" alt="Sara">
+      <div class="carousel-caption"><p class="mb-0">Sara</p></div>
+    </div>
+    <div class="carousel-item ratio ratio-4x3">
+      <img src="img/nuestros.5.png" class="d-block w-80 h-100 object-fit-cover" alt="Milo">
+      <div class="carousel-caption"><p class="mb-0">Milo</p></div>
+    </div>
+    <div class="carousel-item ratio ratio-4x3">
+      <img src="img/nuestros.6.png" class="d-block w-80 h-100 object-fit-cover" alt="Lola">
+      <div class="carousel-caption"><p class="mb-0">Lola</p></div>
+    </div>
+  </div>
 
-      <article class="footer__card">
-        <h3 class="footer__titulo center">Menú</h3>
-        <ul class="reset-list footer__list">
-          <li class="footer__items"><a class="footer__link" href="/">Inicio</a></li>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carruselPacientes" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carruselPacientes" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
 
-          <li class="footer__items"><a class="footer__link" href="institucional.html">Institucional</a></li>
-          <li class="footer__items"><a class="footer__link" href="contacto.html">Contacto</a></li>
+<section class="container my-5 text-start" id="consejos" style="max-width: 700px;">
+  <h2 class="my-4 text-center">Consejos de cuidado</h2>
 
-        </ul>
-      </article>
+  <div class="accordion" id="acordeonConsejos">
 
-      <article class="footer__card">
-        <h3 class="footer__titulo center">Contactanos</h3>
-        <address>
-          <p class="footer__items">Email: <a href="mailto:info@example.com">veterinarialamary@gmail.com</a></p>
-          <p class="footer__items">Teléfono: <a href="tel:+5493458996234">+54 9 3458996234</a></p>
-          <p class="footer__items">Dirección: Av. San Lorenzo, Concordia</p>
-        </address>
-      </article>
-      <article class="footer__card">
-        <h3 class="footer__titulo center">Seguinos</h3>
-        <ul class="reset-list footer__list--social">
-          <li>
-            <a href="https://www.facebook.com" target="_blank">
-              <svg class="svg-img" fill="white" viewBox="2 2 20 20" xmlns="http://www.w3.org/2000/svg">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z">
-                  </path>
-                </g>
-              </svg>
+    <div class="accordion-item">
+      <h3 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#c1" aria-expanded="true" aria-controls="c1">
+          ¿Cada cuánto debo vacunar a mi mascota?
+        </button>
+      </h3>
+      <div id="c1" class="accordion-collapse collapse show" data-bs-parent="#acordeonConsejos">
+        <div class="accordion-body">
+         <p>
+  <strong>Cachorros:</strong> La primera vacuna se aplica entre las 6 y 8 semanas de vida, seguida de refuerzos cada 3-4 semanas hasta las 16 semanas.
+</p>
+<p>
+  <strong>Adultos:</strong> Las vacunas principales requieren refuerzos anuales, y la vacuna antirrábica es obligatoria en Argentina.
+</p>
+<p>
+  <strong>Vacunas obligatorias:</strong> En Argentina, la vacuna antirrábica es obligatoria y se aplica a partir de los 3 meses de vida, con refuerzos anuales.
+</p>
+        </div>
+      </div>
+    </div>
 
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com" target="_blank">
-              <svg class="svg-img" fill="#000000" viewBox="0 0 19.2 19.2" data-name="Instagram w/circle"
-                xmlns="http://www.w3.org/2000/svg">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M13.498 6.651a1.656 1.656 0 0 0-.95-.949 2.766 2.766 0 0 0-.928-.172c-.527-.024-.685-.03-2.02-.03s-1.493.006-2.02.03a2.766 2.766 0 0 0-.929.172 1.656 1.656 0 0 0-.949.95 2.766 2.766 0 0 0-.172.928c-.024.527-.03.685-.03 2.02s.006 1.493.03 2.02a2.766 2.766 0 0 0 .172.929 1.656 1.656 0 0 0 .95.949 2.766 2.766 0 0 0 .928.172c.527.024.685.029 2.02.029s1.493-.005 2.02-.03a2.766 2.766 0 0 0 .929-.171 1.656 1.656 0 0 0 .949-.95 2.766 2.766 0 0 0 .172-.928c.024-.527.029-.685.029-2.02s-.005-1.493-.03-2.02a2.766 2.766 0 0 0-.171-.929zM9.6 12.168A2.568 2.568 0 1 1 12.168 9.6 2.568 2.568 0 0 1 9.6 12.168zm2.669-4.637a.6.6 0 1 1 .6-.6.6.6 0 0 1-.6.6zM11.267 9.6A1.667 1.667 0 1 1 9.6 7.933 1.667 1.667 0 0 1 11.267 9.6zM9.6 0a9.6 9.6 0 1 0 9.6 9.6A9.6 9.6 0 0 0 9.6 0zm4.97 11.661a3.67 3.67 0 0 1-.233 1.214 2.556 2.556 0 0 1-1.462 1.462 3.67 3.67 0 0 1-1.213.233c-.534.024-.704.03-2.062.03s-1.528-.006-2.062-.03a3.67 3.67 0 0 1-1.213-.233 2.556 2.556 0 0 1-1.462-1.462 3.67 3.67 0 0 1-.233-1.213c-.024-.534-.03-.704-.03-2.062s.006-1.528.03-2.062a3.67 3.67 0 0 1 .232-1.213 2.556 2.556 0 0 1 1.463-1.463 3.67 3.67 0 0 1 1.213-.232c.534-.024.704-.03 2.062-.03s1.528.006 2.062.03a3.67 3.67 0 0 1 1.213.232 2.556 2.556 0 0 1 1.462 1.463 3.67 3.67 0 0 1 .233 1.213c.024.534.03.704.03 2.062s-.006 1.528-.03 2.062z"
-                    >
-                  </path>
-                </g>
-              </svg>
-            </a></li>
-          <li><a href="https://ar.linkedin.com/" target="_blank"><svg class="svg-img" fill="#000000" version="1.1" id="Capa_1"
-                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 97.75 97.75"
-                xml:space="preserve">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                  <g>
-                    <path
-                      d="M48.875,0C21.882,0,0,21.882,0,48.875S21.882,97.75,48.875,97.75S97.75,75.868,97.75,48.875S75.868,0,48.875,0z M30.562,81.966h-13.74V37.758h13.74V81.966z M23.695,31.715c-4.404,0-7.969-3.57-7.969-7.968c0.001-4.394,3.565-7.964,7.969-7.964 c4.392,0,7.962,3.57,7.962,7.964C31.657,28.146,28.086,31.715,23.695,31.715z M82.023,81.966H68.294V60.467 c0-5.127-0.095-11.721-7.142-11.721c-7.146,0-8.245,5.584-8.245,11.35v21.869H39.179V37.758h13.178v6.041h0.185 c1.835-3.476,6.315-7.14,13-7.14c13.913,0,16.481,9.156,16.481,21.059V81.966z">
-                    </path>
-                  </g>
-                </g>
-              </svg></a></li>
+    <div class="accordion-item">
+      <h3 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2" aria-expanded="false" aria-controls="c2">
+          ¿Cuándo es una urgencia veterinaria?
+        </button>
+      </h3>
+      <div id="c2" class="accordion-collapse collapse" data-bs-parent="#acordeonConsejos">
+        <div class="accordion-body">
+          <p>
+            <strong> Dificultad respiratoria:</strong> Respiración con esfuerzo evidente, especialmente en reposo.
+          </p>
+          <p>
+            <strong>Encías pálidas, azuladas o muy enrojecidas:</strong> Color de las mucosas puede indicar emergencia.
+          </p>
 
-
-        </ul>
-      </article>
-    </section>
-   
-      <p class="center copy">© 2026 Veterinaria La Mary – UNER FCAD. Todos los derechos reservados.</p>
-      <!-- <img src="./img/gatito_optimizado.png" alt="gatito" class="footer__gatito"> -->
+        <p> <strong> Vómito persistente o con sangre:</strong> Más de 3 episodios de vómito en menos de 12 horas.</p>
+        <p> 
+          <strong>Sangrado intenso o posible intoxicación:</strong> Sangrado que no se controla o ingestión de un posible tóxico.
+       </p>
+       <p> 
+        <strong>Convulsiones o pérdida de conciencia:</strong> Si se presentan convulsiones, especialmente si duran más de cinco minutos.
+      </p>
+      <p>
+        <strong> Incapacidad para orinar:</strong> Si un gato no puede orinar, puede estar sufriendo una obstrucción urinaria. 
+      </p>
+      </div>
     
+      </div>
+    </div>
 
-  </footer>
-  <!-- fin footer -->
+    <div class="accordion-item">
+      <h3 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c3" aria-expanded="false" aria-controls="c3">
+          ¿Con qué frecuencia debo llevar a mi mascota al veterinario?
+        </button>
+      </h3>
+      <div id="c3" class="accordion-collapse collapse" data-bs-parent="#acordeonConsejos">
+        <div class="accordion-body">
+      
+Debes llevar a tu mascota al veterinario de manera regular según su edad y estado de salud, y de inmediato si presenta signos de enfermedad o cambios en su comportamiento.
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <hr class="mx-auto w-75">
+
+    <h4 class="my-4">
+      Cuidado veterinario para tu mascota, desde hace 10 años
+    </h4>
+
+    <hr class="mx-auto w-75">
+  </div>
+<!-- inicio footer -->
+<footer>
+
+  <section class="footer__container contenedor">
+
+    <article class="footer__card">
+      <h3 class="footer__titulo center">Menú</h3>
+      <ul class="reset-list footer__list">
+        <li class="footer__items"><a class="footer__link" href="/">Inicio</a></li>
+
+        <li class="footer__items"><a class="footer__link" href="institucional.html">Institucional</a></li>
+        <li class="footer__items"><a class="footer__link" href="contacto.html">Contacto</a></li>
+
+      </ul>
+    </article>
+
+    <article class="footer__card">
+      <h3 class="footer__titulo center">Contactanos</h3>
+      <address>
+        <p class="footer__items">Email: <a href="mailto:info@example.com">veterinarialamary@gmail.com</a></p>
+        <p class="footer__items">Teléfono: <a href="tel:+5493458996234">+54 9 3458996234</a></p>
+        <p class="footer__items">Dirección: Av. San Lorenzo, Concordia</p>
+      </address>
+    </article>
+    <article class="footer__card">
+      <h3 class="footer__titulo center">Seguinos</h3>
+      <ul class="reset-list footer__list--social">
+        <li>
+          <a href="https://www.facebook.com" target="_blank">
+            <svg class="svg-img" fill="white" viewBox="2 2 20 20" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z">
+                </path>
+              </g>
+            </svg>
+
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com" target="_blank">
+            <svg class="svg-img" fill="#000000" viewBox="0 0 19.2 19.2" data-name="Instagram w/circle"
+              xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M13.498 6.651a1.656 1.656 0 0 0-.95-.949 2.766 2.766 0 0 0-.928-.172c-.527-.024-.685-.03-2.02-.03s-1.493.006-2.02.03a2.766 2.766 0 0 0-.929.172 1.656 1.656 0 0 0-.949.95 2.766 2.766 0 0 0-.172.928c-.024.527-.03.685-.03 2.02s.006 1.493.03 2.02a2.766 2.766 0 0 0 .172.929 1.656 1.656 0 0 0 .95.949 2.766 2.766 0 0 0 .928.172c.527.024.685.029 2.02.029s1.493-.005 2.02-.03a2.766 2.766 0 0 0 .929-.171 1.656 1.656 0 0 0 .949-.95 2.766 2.766 0 0 0 .172-.928c.024-.527.029-.685.029-2.02s-.005-1.493-.03-2.02a2.766 2.766 0 0 0-.171-.929zM9.6 12.168A2.568 2.568 0 1 1 12.168 9.6 2.568 2.568 0 0 1 9.6 12.168zm2.669-4.637a.6.6 0 1 1 .6-.6.6.6 0 0 1-.6.6zM11.267 9.6A1.667 1.667 0 1 1 9.6 7.933 1.667 1.667 0 0 1 11.267 9.6zM9.6 0a9.6 9.6 0 1 0 9.6 9.6A9.6 9.6 0 0 0 9.6 0zm4.97 11.661a3.67 3.67 0 0 1-.233 1.214 2.556 2.556 0 0 1-1.462 1.462 3.67 3.67 0 0 1-1.213.233c-.534.024-.704.03-2.062.03s-1.528-.006-2.062-.03a3.67 3.67 0 0 1-1.213-.233 2.556 2.556 0 0 1-1.462-1.462 3.67 3.67 0 0 1-.233-1.213c-.024-.534-.03-.704-.03-2.062s.006-1.528.03-2.062a3.67 3.67 0 0 1 .232-1.213 2.556 2.556 0 0 1 1.463-1.463 3.67 3.67 0 0 1 1.213-.232c.534-.024.704-.03 2.062-.03s1.528.006 2.062.03a3.67 3.67 0 0 1 1.213.232 2.556 2.556 0 0 1 1.462 1.463 3.67 3.67 0 0 1 .233 1.213c.024.534.03.704.03 2.062s-.006 1.528-.03 2.062z">
+                </path>
+              </g>
+            </svg>
+          </a>
+        </li>
+        <li><a href="https://ar.linkedin.com/" target="_blank"><svg class="svg-img" fill="#000000" version="1.1"
+              id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 97.75 97.75" xml:space="preserve">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <path
+                    d="M48.875,0C21.882,0,0,21.882,0,48.875S21.882,97.75,48.875,97.75S97.75,75.868,97.75,48.875S75.868,0,48.875,0z M30.562,81.966h-13.74V37.758h13.74V81.966z M23.695,31.715c-4.404,0-7.969-3.57-7.969-7.968c0.001-4.394,3.565-7.964,7.969-7.964 c4.392,0,7.962,3.57,7.962,7.964C31.657,28.146,28.086,31.715,23.695,31.715z M82.023,81.966H68.294V60.467 c0-5.127-0.095-11.721-7.142-11.721c-7.146,0-8.245,5.584-8.245,11.35v21.869H39.179V37.758h13.178v6.041h0.185 c1.835-3.476,6.315-7.14,13-7.14c13.913,0,16.481,9.156,16.481,21.059V81.966z">
+                  </path>
+                </g>
+              </g>
+            </svg></a></li>
+
+
+      </ul>
+    </article>
+  </section>
+
+  <p class="center copy">© 2026 Veterinaria La Mary – UNER FCAD. Todos los derechos reservados.</p>
+  <!-- <img src="./img/gatito_optimizado.png" alt="gatito" class="footer__gatito"> -->
+
+
+</footer>
+<!-- fin footer -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
