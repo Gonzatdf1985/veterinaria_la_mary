@@ -6,21 +6,33 @@ body {
   font-family: var(--font-text);
   background-color: var(--color-bg);
   color: var(--color-text);
+  overflow-x: hidden;
 
 
 
 
 }
+
+/*header {
+
+  background-color: var(--color-foot-head);
+  /* height: 18vh; 
+background-image: url(../img/pngwing.com.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center -120%;
+  min-height: 250px;
+
+}*/
 
 header {
-  margin-bottom: 8rem;
   background-color: var(--color-foot-head);
-  height: 18vh;
-
-
+  background-image: url(../img/pngwing.com.webp);
+  background-repeat: no-repeat;
+  background-size: 180px;
+  background-position: center bottom;
+  min-height: 220px;
 }
-
-
 
 h1,
 h2,
@@ -50,13 +62,24 @@ h3 {
  
 
 }
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
 .nav-bar-custom{
   background-color: var(--color-foot-head);
 }
 
-.menu__logo {
-  width: 180px;
-  /* position: absolute; */
+
+  .menu__logo {
+      max-width: 180px;
+      width: 100%;
+      height: auto;
+    
 
 }
 
@@ -66,15 +89,11 @@ h3 {
   bottom: -8px;
 }
 
-.list-container {
+/* .list-container {
   display: flex;
   column-gap: 1rem;
 
-}
-.navbar-collapse{
-  flex-grow:0;
-}
-
+} */
 
 
 .menu__link {
@@ -91,7 +110,9 @@ h3 {
 
 }
 
-
+.uner-btn{
+  color: var(--accent-color);
+}
 .list-container .menu__link {
 
   border: 1px solid white;
@@ -141,7 +162,7 @@ h3 {
 
 
 
-.slogans .frase {
+/* .slogans .frase {
   font-size: 3.5rem;
   width: 750px;
   margin-bottom: 2rem;
@@ -149,7 +170,7 @@ h3 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 
-}
+} */
 
 .vetes-botones-container {
   display: flex;
@@ -239,7 +260,7 @@ h3 {
   justify-content: space-between;
   column-gap: 40px;
 
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 0 2rem;
 
 }
@@ -323,21 +344,14 @@ div h1 {
 
 .imagen-hero {
   margin-top: -8rem;
-  width: 100%;
+
 
 }
-.hero{
-  background-image: url(../img/pngwing.com.webp);
-  background-repeat: no-repeat;
-  background-size: 150px;
-  background-position: 700px bottom;
-  position:relative;
-}
+
 
 hr {
   border: none;
   border-top: 1px solid #ddd6c4;
-  margin: 2rem 0;
 }
 
 
@@ -430,7 +444,7 @@ hr {
 
 .texto-equipo {
   font-family: var(--font-text), sans-serif;
-  max-width: 700px;
+  /* max-width: 700px; */
   margin: 60px auto;
   padding: 25px 30px;
   background-color: #ffffff;
@@ -445,14 +459,14 @@ hr {
 
 .cuidado {
   font-family: var(--font-text), sans-serif;
-  max-width: 700px;
+  /* max-width: 700px; */
 }
 footer {
   background-color: var(--color-foot-head);
   background-image: url(../img/gatito_optimizado.webp);
   background-repeat: no-repeat;
   background-size: 120px;
-  background-position: 480px bottom;
+  /* background-position: 480px bottom; */
 
   
   padding-top: 2rem;
@@ -464,7 +478,9 @@ footer {
   flex-basis: 180px;
 }
 
-
+footer{
+  background-color: var(--color-foot-head)
+}
 .footer__container {
   display: flex;
   justify-content: space-between;
