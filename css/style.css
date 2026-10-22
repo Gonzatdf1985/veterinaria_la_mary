@@ -572,3 +572,22 @@ footer{
   width: 100%;
   
 }
+
+.card-panel {
+  border: 1px solid #d9e5dc !important;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.icon-box {
+  width: 36px;
+  height: 36px;
+  background-color: var(--color-bg);
+  color: var(--color-acent-secundary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.1rem;
+}
