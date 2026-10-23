@@ -56,6 +56,7 @@
 
 <!-- inicio main -->
 
+<main>
 <!-- turnos online -->
 <div class="container mt-5">
   <div class="row text-center">
@@ -112,19 +113,19 @@
             <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm">
                 <h3 class="fw-bold mb-4">Solicitud de Turno</h3>
 
-                <form action="">
+                <form action="https://formspree.io/f/xwlvgrng" method="post">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <label class="form-label fw-semibold">Nombre y Apellido</label>
-                            <input type="text" class="form-control" placeholder="Tu nombre" required>
+                            <input type="text" name="nombre_duenio" class="form-control" placeholder="Tu nombre" required>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label fw-semibold">Teléfono de contacto</label>
-                            <input type="tel" class="form-control" placeholder="Ej: 345 1234567" required>
+                            <input type="tel" name="telefono" class="form-control" placeholder="Ej: 345 1234567" required>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label fw-semibold">Nombre de la Mascota</label>
-                            <input type="text" class="form-control" placeholder="Nombre de tu mascota" required>
+                            <input type="text" name="nombre_mascota" class="form-control" placeholder="Nombre de tu mascota" required>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label fw-semibold">Tipo de Mascota</label>
@@ -147,11 +148,11 @@
                         </div>
                         <div class="col-md-6">
                             <label class="form-label fw-semibold">Fecha deseada</label>
-                            <input type="date" class="form-control" required>
+                            <input type="date" name="fecha_turno" class="form-control" required>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label fw-semibold">Horario (Mañana/Tarde)</label>
-                            <select class="form-select" required>
+                            <select class="form-select" name="franja_horaria" required>
                                 <option value="" selected disabled>Seleccionar franja...</option>
                                 <option value="manana">Mañana (9:00 a 13:00 hs)</option>
                                 <option value="tarde">Tarde (16:00 a 19:00 hs)</option>
@@ -169,49 +170,6 @@
     </div>
 </div>
 
-<!-- pagina en construccion -->
-  <main class="container py-5">
-  
-    <div class="row justify-content-center">
-  
-      <div class="col-12 col-md-10 col-lg-8">
-  
-        <div class="card border-0 shadow-lg">
-  
-          <div class="card-body text-center p-4 p-md-5">
-  
-            <span class="badge bg-warning text-dark fs-6 mb-3">
-              Próximamente
-            </span>
-  
-            <h1 class="display-4 fw-bold mb-4">
-              🚧 Página en construcción
-            </h1>
-  
-            <p class="lead text-muted">
-              Estamos trabajando para brindarte una mejor experiencia.
-            </p>
-  
-            <img src="./img/construccion.avif" alt="Página en construcción" class="img-fluid rounded shadow my-4">
-  
-            <div class="progress mb-4" style="height: 25px;">
-              <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 80%;">
-                80% completado
-              </div>
-            </div>
-  
-            <a href="index.html" class="btn btn-warning btn-lg">
-              Volver al inicio
-            </a>
-  
-          </div>
-  
-        </div>
-  
-      </div>
-  
-    </div>
-  
   </main>
  
 
