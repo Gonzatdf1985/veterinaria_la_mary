@@ -13,25 +13,10 @@ body {
 
 }
 
-/*header {
-
-  background-color: var(--color-foot-head);
-  /* height: 18vh; 
-background-image: url(../img/pngwing.com.webp);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center -120%;
-  min-height: 250px;
-
-}*/
 
 header {
   background-color: var(--color-foot-head);
-  background-image: url(../img/pngwing.com.webp);
-  background-repeat: no-repeat;
-  background-size: 180px;
-  background-position: center bottom;
-  min-height: 220px;
+  width: 100%;
 }
 
 h1,
@@ -75,7 +60,8 @@ h3 {
 }
 
 
-  .menu__logo {
+  
+.menu__logo {
       max-width: 180px;
       width: 100%;
       height: auto;
@@ -83,11 +69,6 @@ h3 {
 
 }
 
-.menu__perrito {
-  width: 160px;
-  position: absolute;
-  bottom: -8px;
-}
 
 /* .list-container {
   display: flex;
@@ -461,17 +442,12 @@ hr {
   font-family: var(--font-text), sans-serif;
   /* max-width: 700px; */
 }
+
+
 footer {
   background-color: var(--color-foot-head);
-  background-image: url(../img/gatito_optimizado.webp);
-  background-repeat: no-repeat;
-  background-size: 120px;
-  /* background-position: 480px bottom; */
-
-  
   padding-top: 2rem;
-
-  min-height: 18vh;
+  width: 100%;
 }
 
 .tarjeta {
@@ -489,23 +465,7 @@ footer{
 
 }
 
-.logo-gatito {
-  width: 150px;
-  aspect-ratio: 1/1;
-  position: relative;
 
-}
-
-.footer__gatito {
-
-  width: 100px;
-  position: absolute;
-  bottom: 0px;
-  left: 500px;
-
-
-
-}
 
 .footer__card {
   padding-left: 10px;
