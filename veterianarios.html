@@ -25,17 +25,30 @@
 
   <main class="container my-5">
     <!-- Título de Sección -->
-    <section class="mb-5 pb-3 border-bottom text-start">
-      <div class="d-flex align-items-center gap-3 text-start">
-        <div class="p-3 rounded-4 shadow-sm" style="background-color: var(--color-bg); color: var(--color-acent-secundary); font-size: 1.8rem;">
-          <i class="bi bi-shield-heart"></i>
-        </div>
-        <div>
-          <h1 class="display-6 fw-bold mb-1 text-start" style="color: var(--color-acent-secundary);">Nómina del Equipo Médico</h1>
-          <p class="text-muted mb-0 text-start">Gestión de matrículas, especialidades y aranceles de consulta de la clínica.</p>
-        </div>
+    
+    <section class="mb-5 pb-3 border-bottom">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+    
+    <!-- Izquierda: Icono, Título y Descripción -->
+    <div class="d-flex align-items-center gap-3">
+      <div class="p-3 rounded-4 shadow-sm" style="background-color: var(--color-bg);">
+        <i class="bi bi-shield-heart fs-2"></i>
       </div>
-    </section>
+      <div>
+        <h1 class="display-6 fw-bold mb-1" style="color: var(--color-acent-secundary);">Nómina del Equipo Médico</h1>
+        <p class="text-muted mb-0">Gestión de matrículas, especialidades y aranceles de consulta de la clínica.</p>
+      </div>
+    </div>
+
+    <!-- Derecha: Botón Volver al Panel -->
+    <div>
+      <a href="./admin.html" class="fw-bold fs-6 btn btn-warning shadow ">
+        <i class="bi bi-arrow-left me-1"></i> Volver al Panel
+      </a>
+    </div>
+
+  </div>
+</section>
 
     <!-- Contenedor Principal de Tarjetas -->
     <div class="row g-4 align-items-start text-start">
