@@ -54,7 +54,122 @@
 </header>
 <!-- fin header -->
 
-  
+<!-- inicio main -->
+
+<!-- turnos online -->
+<div class="container mt-5">
+  <div class="row text-center">
+    <div class="col">
+      <h3 class="display-5 mb-3 fw-bold">Turnos Online</h3>
+      <p>Solicitá un turno para la atención de tu mascota de forma rápida y sencilla.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5 pt-4">
+  <div class="row justify-content-center mb-4">
+    <div class="col-12 text-center">
+      <h1><strong>¿Cómo solicitar tu turno?</strong></h1>
+    </div>
+  </div>
+
+  <div class="row text-center g-4 justify-content-center">
+        
+        <!-- paso 1 -->
+        <div class="col-md-4">
+            <div class="rounded-circle text-white d-flex align-items-center justify-content-center mx-auto mb-3 shadow-sm" 
+                 style="width: 60px; height: 60px; background-color: #086262">
+                <i class="bi bi-calendar-event fs-3"></i>
+            </div>
+            <h5 class="fw-bold">1. Elegí el servicio</h5>
+        </div>
+
+        <!-- paso 2 -->
+        <div class="col-md-4">
+            <div class="rounded-circle text-white d-flex align-items-center justify-content-center mx-auto mb-3 shadow-sm" 
+                 style="width: 60px; height: 60px; background-color: #086262">
+                <i class="bi bi-person-vcard fs-3"></i>
+            </div>
+            <h5 class="fw-bold">2. Completá los datos</h5>
+        </div>
+
+        <!-- paso 3 -->
+        <div class="col-md-4">
+            <div class="rounded-circle text-white d-flex align-items-center justify-content-center mx-auto mb-3 shadow-sm" 
+                 style="width: 60px; height: 60px; background-color: #086262;">
+                <i class="bi bi-check-circle fs-3"></i>
+            </div>
+            <h5 class="fw-bold">3. Confirmación</h5>
+        </div>
+
+    </div>
+</div>
+
+<!-- formulario -->
+<div class="container my-5">
+    <div class="row justify-content-between g-4">
+        <div class="col">
+            <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm">
+                <h3 class="fw-bold mb-4">Solicitud de Turno</h3>
+
+                <form action="">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Nombre y Apellido</label>
+                            <input type="text" class="form-control" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Teléfono de contacto</label>
+                            <input type="tel" class="form-control" placeholder="Ej: 345 1234567" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Nombre de la Mascota</label>
+                            <input type="text" class="form-control" placeholder="Nombre de tu mascota" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Tipo de Mascota</label>
+                            <select class="form-select" required>
+                                <option value="" selected disabled>Seleccionar...</option>
+                                <option value="perro">Perro</option>
+                                <option value="gato">Gato</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label fw-semibold">Motivo de consulta</label>
+                            <select class="form-select" required>
+                                <option value="" selected disabled>Consulta general, Vacunación, Peluquería, etc.</option>
+                                <option value="consulta">Consulta General</option>
+                                <option value="vacunacion">Vacunación / Desparasitación</option>
+                                <option value="peluqueria">Peluquería y Estética</option>
+                                <option value="cirugia">Cirugía / Control</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Fecha deseada</label>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Horario (Mañana/Tarde)</label>
+                            <select class="form-select" required>
+                                <option value="" selected disabled>Seleccionar franja...</option>
+                                <option value="manana">Mañana (9:00 a 13:00 hs)</option>
+                                <option value="tarde">Tarde (16:00 a 19:00 hs)</option>
+                            </select>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <button type="submit" class="btn text-white w-100 py-2 fw-bold rounded-3 shadow-sm" style="background-color: #90c487; border-color: #90c487;">
+                                Solicitar Turno
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- pagina en construccion -->
   <main class="container py-5">
   
     <div class="row justify-content-center">
@@ -80,8 +195,8 @@
             <img src="./img/construccion.avif" alt="Página en construcción" class="img-fluid rounded shadow my-4">
   
             <div class="progress mb-4" style="height: 25px;">
-              <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 75%;">
-                75% completado
+              <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 80%;">
+                80% completado
               </div>
             </div>
   
