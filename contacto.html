@@ -2,74 +2,62 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- CSS de Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  
-  <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/base.css">
-  <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria La Mary</title>
 
-  <title>Iniciar Sesión - Veterinaria La Mary</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 
-<!-- inicio header -->
-<header class="w-100 container-fluid px-0">
-  <div class="hero">
+    <!-- inicio header -->
+    <header class="container-fluid">
+        <div class="hero">
 
-    <!-- inicio de navbar bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-dark px-3 px-lg-4">
-      <div class="container-fluid px-0">
-        <!-- logo -->
-        <a class="navbar-brand" href="./index.html">
-          <img class="menu__logo" src="./icons/logo_light.png" alt="Logo veterinaria La Mary">
-        </a>
+            <!-- inicio de navbar bootstrap -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid navbar-dark">
+                    <!-- logo -->
+                    <a class="navbar-brand" href="/">
+                        <img class="menu__logo" src="./icons/logo_light.png" alt="Logo veterinaria La Mary"></a>
 
-        <!-- menu hamburguesa -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+                    <!-- menu hamburguesa -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-        <!-- menu -->
-        <div class="navbar-collapse collapse" id="menuNav">
-          <ul class="list-container navbar-nav ms-auto mb-2 mb-lg-0 gap-2 align-items-lg-center">
-            
-            <li class="nav-item">
-              <a class="nav-link fw-bold fs-5" href="./index.html">Inicio</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link fw-bold fs-5" href="./institucional.html">Institucional</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link fw-bold fs-5" href="./contacto.html">Contacto</a>
-            </li>
+                    <!-- menu -->
+                    <div class="navbar-collapse collapse" id="menuNav">
+                        <ul class="list-container navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+                            <li class="nav-item"><a class="nav-link fw-bold fs-5" href="./index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link fw-bold fs-5"
+                                    href="./institucional.html">Institucional</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link fw-bold fs-5 disabled"
+                                    href="./contacto.html">Contacto</a></li>
 
-            <!-- Botón de Iniciar Sesión -->
-            <li class="nav-item mt-2 mt-lg-0">
-              <a class="fw-bold fs-5 btn btn-warning shadow w-100 px-3" href="./login.html">Iniciar Sesión</a>
-            </li>
+                            <li class="nav-item"><a class="fw-bold fs-5 btn btn-warning shadow"
+                                    href="turno.html">Turno</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-           
-          </ul>
+            </nav>
         </div>
-      </div>
-    </nav>
+    </header>
+    <!-- fin header -->
 
-  </div>
-</header>
-<!-- fin header -->
     <!-- inicio main -->
     <main>
         <section class="container mt-5">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="display-5 fw-bold">Contáctanos</h2>
+                    <h2 class="display-4 mb-3 fw-bold">Contáctanos</h2>
                     <p class="lead text-body-secondary">Cada mascota merece una atención de confianza. <br>Contactanos y
                         recibí un asesoramiento cercano,
                         profesional y pensado para el bienestar de tu compañero.</p>
@@ -79,55 +67,61 @@
             </div>
         </section>
 
-        <section class="container my-5">
-            <div class="card shadow-lg border-success border-1 rounded-3">
-                <div class="row g-0">
-
-                    <!-- Imagen -->
-                    <div class="col-md-5">
-                        <img src="img/Perrito_Internado.webp" alt="Perrito en internación"
-                            class="img-fluid h-100 object-fit-cover">
+        <!--informacion de contacto-->
+    <div class="container">
+        <div class="row justify-content-between bg-white p-5 rounded-4 shadow-sm my-5">
+            
+            <!-- información -->
+            <div class="col-md-5">
+                <h2><strong>Envíanos cualquier duda que tengas, las resolveremos con gusto.</strong></h2>
+                <p class="mt-4">Si tienes alguna duda del servicio, contáctanos por medio del siguiente formulario con tus inquietudes.</p>
+                <p>También puedes comunicarte con nosotros vía redes sociales, envíanos un MD y estaremos encantados de atenderte.</p>
+                <h5 class="mt-4"><strong>Redes: </strong></h5>
+                <div class="d-flex gap-2">
+                        <a href="https://www.facebook.com/VeterinariaLaMary" target="_blank" class="text-white rounded-circle d-flex align-items-center justify-content-center text-decoration-none shadow-sm" style="width: 28px; height: 28px; background-color: #90C487;">
+                            <i class="bi bi-facebook" style="font-size: 14px;"></i>
+                        </a>
+                        <a href="https://www.instagram.com/VeterinariaLaMary" target="_blank" class="text-white rounded-circle d-flex align-items-center justify-content-center text-decoration-none shadow-sm" style="width: 28px; height: 28px; background-color: #90C487;">
+                            <i class="bi bi-instagram" style="font-size: 14px;"></i>
+                        </a>
+                        <a href="https://www.youtube.com/c/VeterinariaLaMary" target="_blank" class="text-white rounded-circle d-flex align-items-center justify-content-center text-decoration-none shadow-sm" style="width: 28px; height: 28px; background-color: #90C487;">
+                            <i class="bi bi-youtube" style="font-size: 14px;"></i>
+                        </a>
                     </div>
-
-                    <!-- Texto -->
-                    <div class="col-md-7">
-                        <div class="card-body p-4 p-lg-5 text-center text-md-start">
-
-
-                            <h2 class="card-title fw-bold mb-3">
-                                ¿Necesitas ayuda?
-                            </h2>
-
-                            <p class="card-text lead text-body-secondary mb-4">
-                                Porque ellos también son parte de la familia. ❤️
-                            </p>
-
-                            <p class="card-text">
-                                Queremos ofrecerte la tranquilidad de contar con
-                                profesionales que se preocupan por su salud y bienestar,
-                                brindando una atención cercana, responsable y comprometida
-                                con cada mascota.
-                            </p>
-
-                            <a href="mailto:veterinarialamary@gmail.com" class="btn btn-success btn-lg">
-                                Contáctanos
-                            </a>
-
-                        </div>
-                    </div>
-
-                </div>
             </div>
-        </section>
-
-
+            
+            <!-- formulario -->
+            <div class="col-md-5">
+                <form action="https://formspree.io/f/xwlvgrng" method="post">
+                    <h2 class="text-center mb-4"><strong>FORMULARIO</strong></h2>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" placeholder="mail@example.com">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Consulta</label>
+                        <textarea name="consulta" id="consulta" class="form-control" rows="4" placeholder="Detalla aquí tu consulta..."></textarea>
+                    </div>
+                    <div class="d-flex justify-content-center mt-4">
+                        <button type="submit" class="btn btn-success px-5" style="background-color: #90C487;">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
         <section class="container my-5">
             <div class="row g-4">
-
                 <!-- Antes de venir -->
                 <div class="col-12 col-lg-6">
-                    <div class="card h-100 shadow-sm border-success">
+                    <div class="card h-100 shadow-sm ">
                         <div class="card-body p-4">
 
                             <h2 class="card-title text-center fw-bold mb-4">
@@ -172,7 +166,7 @@
 
                 <!-- Contacto -->
                 <div class="col-12 col-lg-6">
-                    <div class="card h-100 shadow-sm border-success">
+                    <div class="card h-100 shadow-sm ">
                         <div class="card-body p-4">
 
                             <h2 class="card-title text-center fw-bold mb-4">
@@ -217,76 +211,159 @@
 
             </div>
         </section>
+
+        <!--preguntas frecuentes-->
+    <div class="container my-5">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8 text-center">
+                <h2><strong>Preguntas Frecuentes</strong></h2>
+                <p class="mt-3">¿Tenés dudas? En nuestra sección de preguntas frecuentes encontrarás respuestas a las consultas más comunes para ayudarte a resolver tus inquietudes de forma rápida y sencilla.</p>
+            </div>
+        </div>
+    <!--acordeon de preguntas-->
+        <div class="row justify-content-center">
+            <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <strong>¿Qué medios de pagos aceptan?</strong>
+                </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Aceptamos efectivo, tarjetas de débito y crédito, transferencias bancarias y pagos a través de cualquier billetera virtual.  
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <strong>¿Necesito solicitar un turno previamente?</strong>
+                </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Para consultas generales, vacunación, controles y cirugías programadas, recomendamos solicitar un turno previo para evitar tiempos de espera. Las urgencias médicas se atienden de inmediato sin necesidad de turno.
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                    <strong>¿Cómo puedo solicitar un presupuesto?</strong>
+                </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Podés solicitar un presupuesto detallado enviándonos un mensaje por WhatsApp, completando el formulario de contacto que encontrás en esta página o llamándonos directamente. En caso de requerir un estudio o cirugía específica, te brindaremos toda la información detallada de los costos.
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+                    <strong>¿Cuanto tardan en responder las consultas?</strong>
+                </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Respondemos los mensajes de WhatsApp y correos electrónicos durante nuestra jornada laboral (Lunes a Viernes de 8:00 a 21:00 hs y Sábados de 9:00 a 18:00 hs). Por lo general, recibirás respuesta en un plazo máximo de 1 a 2 horas. Si la consulta es urgente, te aconsejamos comunicarte por llamada telefónica.
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                    <strong>¿Puedo recibir atencion personalizada?</strong>
+                </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    ¡Sí, absolutamente! En Veterinaria La Mary cada mascota recibe una evaluación médica individualizada. Nos tomamos el tiempo necesario para conocer su historial clínico, responder todas tus dudas y ofrecerte un seguimiento personalizado de su tratamiento o nutrición.
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
         <!-- fin main -->
 
- <!-- inicio footer -->
-<footer class="text-white py-4 mt-5">
-  <div class="container-md">
-    <div class="row text-center justify-content-md-between">
-      <div class="col-12 col-md-auto">
-        <h3 class="h5 mb-3">Menú</h3>
-        <ul class="list-unstyled">
-          <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link disabled" href="./institucional.html">Institucional</a></li>
-          <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
-        </ul>
-      </div>
-      <div class="col-12 col-md-auto">
-        <h3 class="h5 mb-3">Contactanos</h3>
-        <address class="small">
-          <p class="mb-1">Email: <a href="mailto:veterinarialamary@gmail.com"
-              class="text-white">veterinarialamary@gmail.com</a></p>
-          <p class="mb-1">Teléfono: <a href="tel:+5493458996234" class="text-white">+54 9 3458996234</a>
-          </p>
-          <p class="mb-1">Dirección: Av. San Lorenzo, Concordia</p>
-        </address>
-      </div>
-      <div class="col-12 col-md-auto">
-        <h3 class="h5 mb-3">Seguinos</h3>
-        <!-- Redes sociales -->
-        <svg class="svg-img" fill="white" viewBox="2 2 20 20" xmlns="http://www.w3.org/2000/svg">
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-          <g id="SVGRepo_iconCarrier">
-            <path
-              d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z">
-            </path>
-          </g>
-        </svg>
-        <svg class="svg-img" fill="#000000" viewBox="0 0 19.2 19.2" data-name="Instagram w/circle"
-          xmlns="http://www.w3.org/2000/svg">
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-          <g id="SVGRepo_iconCarrier">
-            <path
-              d="M13.498 6.651a1.656 1.656 0 0 0-.95-.949 2.766 2.766 0 0 0-.928-.172c-.527-.024-.685-.03-2.02-.03s-1.493.006-2.02.03a2.766 2.766 0 0 0-.929.172 1.656 1.656 0 0 0-.949.95 2.766 2.766 0 0 0-.172.928c-.024.527-.03.685-.03 2.02s.006 1.493.03 2.02a2.766 2.766 0 0 0 .172.929 1.656 1.656 0 0 0 .95.949 2.766 2.766 0 0 0 .928.172c.527.024.685.029 2.02.029s1.493-.005 2.02-.03a2.766 2.766 0 0 0 .929-.171 1.656 1.656 0 0 0 .949-.95 2.766 2.766 0 0 0 .172-.928c.024-.527.029-.685.029-2.02s-.005-1.493-.03-2.02a2.766 2.766 0 0 0-.171-.929zM9.6 12.168A2.568 2.568 0 1 1 12.168 9.6 2.568 2.568 0 0 1 9.6 12.168zm2.669-4.637a.6.6 0 1 1 .6-.6.6.6 0 0 1-.6.6zM11.267 9.6A1.667 1.667 0 1 1 9.6 7.933 1.667 1.667 0 0 1 11.267 9.6zM9.6 0a9.6 9.6 0 1 0 9.6 9.6A9.6 9.6 0 0 0 9.6 0zm4.97 11.661a3.67 3.67 0 0 1-.233 1.214 2.556 2.556 0 0 1-1.462 1.462 3.67 3.67 0 0 1-1.213.233c-.534.024-.704.03-2.062.03s-1.528-.006-2.062-.03a3.67 3.67 0 0 1-1.213-.233 2.556 2.556 0 0 1-1.462-1.462 3.67 3.67 0 0 1-.233-1.213c-.024-.534-.03-.704-.03-2.062s.006-1.528.03-2.062a3.67 3.67 0 0 1 .232-1.213 2.556 2.556 0 0 1 1.463-1.463 3.67 3.67 0 0 1 1.213-.232c.534-.024.704-.03 2.062-.03s1.528.006 2.062.03a3.67 3.67 0 0 1 1.213.232 2.556 2.556 0 0 1 1.462 1.463 3.67 3.67 0 0 1 .233 1.213c.024.534.03.704.03 2.062s-.006 1.528-.03 2.062z">
-            </path>
-          </g>
-        </svg>
-        <svg class="svg-img" fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 97.75 97.75" xml:space="preserve">
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-          <g id="SVGRepo_iconCarrier">
-            <g>
-              <path
-                d="M48.875,0C21.882,0,0,21.882,0,48.875S21.882,97.75,48.875,97.75S97.75,75.868,97.75,48.875S75.868,0,48.875,0z M30.562,81.966h-13.74V37.758h13.74V81.966z M23.695,31.715c-4.404,0-7.969-3.57-7.969-7.968c0.001-4.394,3.565-7.964,7.969-7.964 c4.392,0,7.962,3.57,7.962,7.964C31.657,28.146,28.086,31.715,23.695,31.715z M82.023,81.966H68.294V60.467 c0-5.127-0.095-11.721-7.142-11.721c-7.146,0-8.245,5.584-8.245,11.35v21.869H39.179V37.758h13.178v6.041h0.185 c1.835-3.476,6.315-7.14,13-7.14c13.913,0,16.481,9.156,16.481,21.059V81.966z">
-              </path>
-            </g>
-          </g>
-        </svg>
-      </div>
-    </div>
-    <hr class="border-secondary my-4">
-    <p class="text-center small m-0">© 2026 Veterinaria La Mary – UNER FCAD. Todos los derechos reservados.</p>
-  </div>
-</footer>
-<!-- fin footer -->
 
-  <!-- Script JS de Bootstrap 5 -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- inicio footer -->
+        <footer class="text-white py-4 mt-5">
+            <div class="container-md">
+                <div class="row text-center justify-content-md-between">
+                    <div class="col-12 col-md-auto">
+                        <h3 class="h5 mb-3">Menú</h3>
+                        <ul class="list-unstyled">
+                            <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="institucional.html">Institucional</a></li>
+                            <li class="nav-item"><a class="nav-link disabled" href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-auto">
+                        <h3 class="h5 mb-3">Contactanos</h3>
+                        <address class="small">
+                            <p class="mb-1">Email: <a href="mailto:veterinarialamary@gmail.com"
+                                    class="text-white">veterinarialamary@gmail.com</a></p>
+                            <p class="mb-1">Teléfono: <a href="tel:+5493458996234" class="text-white">+54 9
+                                    3458996234</a>
+                            </p>
+                            <p class="mb-1">Dirección: Av. San Lorenzo, Concordia</p>
+                        </address>
+                    </div>
+                    <div class="col-12 col-md-auto">
+                        <h3 class="h5 mb-3">Seguinos</h3>
+                        <!-- Redes sociales -->
+                        <svg class="svg-img" fill="white" viewBox="2 2 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z">
+                                </path>
+                            </g>
+                        </svg>
+                        <svg class="svg-img" fill="#000000" viewBox="0 0 19.2 19.2" data-name="Instagram w/circle"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M13.498 6.651a1.656 1.656 0 0 0-.95-.949 2.766 2.766 0 0 0-.928-.172c-.527-.024-.685-.03-2.02-.03s-1.493.006-2.02.03a2.766 2.766 0 0 0-.929.172 1.656 1.656 0 0 0-.949.95 2.766 2.766 0 0 0-.172.928c-.024.527-.03.685-.03 2.02s.006 1.493.03 2.02a2.766 2.766 0 0 0 .172.929 1.656 1.656 0 0 0 .95.949 2.766 2.766 0 0 0 .928.172c.527.024.685.029 2.02.029s1.493-.005 2.02-.03a2.766 2.766 0 0 0 .929-.171 1.656 1.656 0 0 0 .949-.95 2.766 2.766 0 0 0 .172-.928c.024-.527.029-.685.029-2.02s-.005-1.493-.03-2.02a2.766 2.766 0 0 0-.171-.929zM9.6 12.168A2.568 2.568 0 1 1 12.168 9.6 2.568 2.568 0 0 1 9.6 12.168zm2.669-4.637a.6.6 0 1 1 .6-.6.6.6 0 0 1-.6.6zM11.267 9.6A1.667 1.667 0 1 1 9.6 7.933 1.667 1.667 0 0 1 11.267 9.6zM9.6 0a9.6 9.6 0 1 0 9.6 9.6A9.6 9.6 0 0 0 9.6 0zm4.97 11.661a3.67 3.67 0 0 1-.233 1.214 2.556 2.556 0 0 1-1.462 1.462 3.67 3.67 0 0 1-1.213.233c-.534.024-.704.03-2.062.03s-1.528-.006-2.062-.03a3.67 3.67 0 0 1-1.213-.233 2.556 2.556 0 0 1-1.462-1.462 3.67 3.67 0 0 1-.233-1.213c-.024-.534-.03-.704-.03-2.062s.006-1.528.03-2.062a3.67 3.67 0 0 1 .232-1.213 2.556 2.556 0 0 1 1.463-1.463 3.67 3.67 0 0 1 1.213-.232c.534-.024.704-.03 2.062-.03s1.528.006 2.062.03a3.67 3.67 0 0 1 1.213.232 2.556 2.556 0 0 1 1.462 1.463 3.67 3.67 0 0 1 .233 1.213c.024.534.03.704.03 2.062s-.006 1.528-.03 2.062z">
+                                </path>
+                            </g>
+                        </svg>
+                        <svg class="svg-img" fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 97.75 97.75" xml:space="preserve">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <g>
+                                    <path
+                                        d="M48.875,0C21.882,0,0,21.882,0,48.875S21.882,97.75,48.875,97.75S97.75,75.868,97.75,48.875S75.868,0,48.875,0z M30.562,81.966h-13.74V37.758h13.74V81.966z M23.695,31.715c-4.404,0-7.969-3.57-7.969-7.968c0.001-4.394,3.565-7.964,7.969-7.964 c4.392,0,7.962,3.57,7.962,7.964C31.657,28.146,28.086,31.715,23.695,31.715z M82.023,81.966H68.294V60.467 c0-5.127-0.095-11.721-7.142-11.721c-7.146,0-8.245,5.584-8.245,11.35v21.869H39.179V37.758h13.178v6.041h0.185 c1.835-3.476,6.315-7.14,13-7.14c13.913,0,16.481,9.156,16.481,21.059V81.966z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <hr class="border-secondary my-4">
+                <p class="text-center small m-0">© 2026 Veterinaria La Mary – UNER FCAD. Todos los derechos reservados.
+                </p>
+            </div>
+        </footer>
+        <!-- fin footer -->
+
+        <!--boton de whatsapp-->
+    <a href="https://wa.me/54text=Hola,%20tengo%20una%20consulta" 
+       target="_blank" 
+       class="position-fixed bottom-0 end-0 m-4 btn btn-success rounded-pill shadow-lg d-flex align-items-center gap-2 px-3 py-2 text-decoration-none" 
+       style="z-index: 1000;">
+        <i class="bi bi-whatsapp fs-4"></i>
+        <span class="fw-semibold">Envianos un Whatsapp</span>
+    </a>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
-
-
- 
