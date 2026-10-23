@@ -42,11 +42,12 @@ h3 {
 
 .logo-contenedor {
   height: 250px;
-  width: 250px; 
-  position: relative; 
- 
+  width: 250px;
+  position: relative;
+
 
 }
+
 .nav-link:hover {
   color: var(--accent-color);
 }
@@ -55,19 +56,20 @@ h3 {
 .carousel-control-next-icon {
   filter: invert(1);
 }
-.nav-bar-custom{
+
+.nav-bar-custom {
   background-color: var(--color-foot-head);
 }
 
 
-  
-.menu__logo {
-      max-width: 180px;
-      width: 100%;
-      height: auto;
-    
 
+
+.menu__logo {
+  height: 50px;
+  width: auto;
 }
+
+
 
 
 /* .list-container {
@@ -82,7 +84,7 @@ h3 {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.2rem;
-  
+
 
 
 
@@ -91,9 +93,10 @@ h3 {
 
 }
 
-.uner-btn{
+.uner-btn {
   color: var(--accent-color);
 }
+
 .list-container .menu__link {
 
   border: 1px solid white;
@@ -134,7 +137,7 @@ h3 {
   transition: background-color 0.3s ease;
 }
 
-.boton:hover{
+.boton:hover {
   background-color: var(--accent-color);
   color: var(--color-acent-secundary);
 }
@@ -224,6 +227,7 @@ h3 {
   display: flex;
   flex-direction: column;
 }
+
 .card-servicio
 /* Apunta al título dentro de la tarjeta: <div class="card-servicio"> <h3> */
 
@@ -375,7 +379,7 @@ hr {
 
 .tarjeta img {
   margin: 0 auto 0.5rem;
-  
+
 }
 
 .h2-servicios {
@@ -454,9 +458,10 @@ footer {
   flex-basis: 180px;
 }
 
-footer{
+footer {
   background-color: var(--color-foot-head)
 }
+
 .footer__container {
   display: flex;
   justify-content: space-between;
@@ -472,9 +477,9 @@ footer{
   flex-grow: 1;
 }
 
-.footer__titulo{
+.footer__titulo {
   margin-bottom: 1.5rem;
- }
+}
 
 .footer__card .footer__titulo {
   color: var(--color-text);
@@ -528,7 +533,7 @@ footer{
 
 
   width: 100%;
-  
+
 }
 
 .card-panel {
