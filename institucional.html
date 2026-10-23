@@ -327,20 +327,20 @@
                 <!-- Formulario Desplegable de Adopción -->
                 <div class="collapse bg-light p-3 rounded mt-2 text-start" id="formAdopcion">
                   <h6 class="fw-bold mb-3">Solicitud de Adopción Responsable</h6>
-                  <form>
+                  <form action="https://formspree.io/f/xwlvgrng" method="post">
                     <div class="mb-2">
                       <label for="nombreAdoptante" class="form-label small mb-1">Nombre y Apellido</label>
-                      <input type="text" class="form-control form-control-sm" id="nombreAdoptante" required
-                        placeholder="Ej. Ana Pérez">
+                      <input type="text" class="form-control form-control-sm" id="nombreAdoptante" required placeholder="Ej. Ana Pérez"
+                        name="nombre">
                     </div>
                     <div class="mb-2">
                       <label for="emailAdoptante" class="form-label small mb-1">Correo Electrónico</label>
                       <input type="email" class="form-control form-control-sm" id="emailAdoptante" required
-                        placeholder="ejemplo@correo.com">
+                        placeholder="ejemplo@correo.com" name="email">
                     </div>
                     <div class="mb-2">
                       <label for="tipoVivienda" class="form-label small mb-1">Tipo de Vivienda</label>
-                      <select class="form-select form-select-sm" id="tipoVivienda" required>
+                      <select class="form-select form-select-sm" id="tipoVivienda" required name="vivienda">
                         <option value="">Seleccionar...</option>
                         <option value="casa">Casa con patio</option>
                         <option value="depto">Departamento</option>
@@ -350,7 +350,7 @@
                     <div class="mb-3">
                       <label for="comentarioAdoptante" class="form-label small mb-1">¿Tenés otras mascotas
                         actualmente?</label>
-                      <textarea class="form-control form-control-sm" id="comentarioAdoptante" rows="2"
+                      <textarea class="form-control form-control-sm" id="comentarioAdoptante" rows="2" name="texto"
                         placeholder="Contanos brevemente sobre tu hogar..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-success btn-sm w-100">Enviar Solicitud</button>
