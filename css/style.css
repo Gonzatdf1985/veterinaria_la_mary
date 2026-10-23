@@ -472,7 +472,7 @@ footer{
   flex-grow: 1;
 }
 
- .footer__titulo{
+.footer__titulo{
   margin-bottom: 1.5rem;
  }
 
@@ -512,16 +512,14 @@ footer{
 }
 
 .footer__icons {
-  width: 2.5rem;
-
-
-
-
+  width: 2rem;
 }
 
 .svg-img {
-  fill: white;
-  width: 2.8rem;
+  fill: white !important;
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
 }
 
 .copy {
