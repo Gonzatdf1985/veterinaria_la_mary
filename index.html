@@ -19,7 +19,7 @@
 
 <!-- inicio header -->
 <header class="w-100 container-fluid px-0">
-  <div class="hero">
+  
 
     <!-- inicio de navbar bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-dark px-3 px-lg-4">
@@ -49,6 +49,9 @@
             <li class="nav-item">
               <a class="nav-link fw-bold fs-5" href="./contacto.html">Contacto</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold fs-5" href="./turno.html">Turno</a>
+            </li>
 
             <!-- Botón de Iniciar Sesión -->
             <li class="nav-item mt-2 mt-lg-0">
@@ -61,10 +64,16 @@
       </div>
     </nav>
 
-  </div>
+
 </header>
 <!-- fin header -->
-
+<div class="hero position-relative">
+  <div class="container-fluid p-0">
+<img src="./img/img.perrito_optimizado.webp" class="img-fluid w-100 d-block" alt="perrito - hero">
+<a href="./turno.html" class="fw-bold shadow-sm btn btn-warning btn-lg  position-absolute px-5 py-3 bottom-0 start-50 mb-5 rounded-3 d-none d-md-block w-25 fs-5">Turno</a>
+  </div>
+  
+</div>
   <!-- tarjetitas de servicios -->
   <section class="text-center mb-5" id="servicios">
     <div class="container">
@@ -284,59 +293,43 @@
 <footer class="text-white py-4 mt-5">
   <div class="container-md">
     <div class="row text-center justify-content-md-between">
+
       <div class="col-12 col-md-auto">
         <h3 class="h5 mb-3">Menú</h3>
         <ul class="list-unstyled">
           <li class="nav-item"><a class="nav-link disabled" href="./index.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="./institucional.html">Institucional</a></li>
           <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="./turno.html">Turno</a></li>
         </ul>
       </div>
+
       <div class="col-12 col-md-auto">
         <h3 class="h5 mb-3">Contactanos</h3>
         <address class="small">
           <p class="mb-1">Email: <a href="mailto:veterinarialamary@gmail.com"
               class="text-white">veterinarialamary@gmail.com</a></p>
-          <p class="mb-1">Teléfono: <a href="tel:+5493458996234" class="text-white">+54 9 3458996234</a>
-          </p>
+          <p class="mb-1">Teléfono: <a href="tel:+5493458996234" class="text-white">+54 9 3458996234</a></p>
           <p class="mb-1">Dirección: Av. San Lorenzo, Concordia</p>
         </address>
       </div>
+
       <div class="col-12 col-md-auto">
         <h3 class="h5 mb-3">Seguinos</h3>
-        <!-- Redes sociales -->
-        <svg class="svg-img" fill="white" viewBox="2 2 20 20" xmlns="http://www.w3.org/2000/svg">
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-          <g id="SVGRepo_iconCarrier">
-            <path
-              d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z">
-            </path>
-          </g>
-        </svg>
-        <svg class="svg-img" fill="#000000" viewBox="0 0 19.2 19.2" data-name="Instagram w/circle"
-          xmlns="http://www.w3.org/2000/svg">
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-          <g id="SVGRepo_iconCarrier">
-            <path
-              d="M13.498 6.651a1.656 1.656 0 0 0-.95-.949 2.766 2.766 0 0 0-.928-.172c-.527-.024-.685-.03-2.02-.03s-1.493.006-2.02.03a2.766 2.766 0 0 0-.929.172 1.656 1.656 0 0 0-.949.95 2.766 2.766 0 0 0-.172.928c-.024.527-.03.685-.03 2.02s.006 1.493.03 2.02a2.766 2.766 0 0 0 .172.929 1.656 1.656 0 0 0 .95.949 2.766 2.766 0 0 0 .928.172c.527.024.685.029 2.02.029s1.493-.005 2.02-.03a2.766 2.766 0 0 0 .929-.171 1.656 1.656 0 0 0 .949-.95 2.766 2.766 0 0 0 .172-.928c.024-.527.029-.685.029-2.02s-.005-1.493-.03-2.02a2.766 2.766 0 0 0-.171-.929zM9.6 12.168A2.568 2.568 0 1 1 12.168 9.6 2.568 2.568 0 0 1 9.6 12.168zm2.669-4.637a.6.6 0 1 1 .6-.6.6.6 0 0 1-.6.6zM11.267 9.6A1.667 1.667 0 1 1 9.6 7.933 1.667 1.667 0 0 1 11.267 9.6zM9.6 0a9.6 9.6 0 1 0 9.6 9.6A9.6 9.6 0 0 0 9.6 0zm4.97 11.661a3.67 3.67 0 0 1-.233 1.214 2.556 2.556 0 0 1-1.462 1.462 3.67 3.67 0 0 1-1.213.233c-.534.024-.704.03-2.062.03s-1.528-.006-2.062-.03a3.67 3.67 0 0 1-1.213-.233 2.556 2.556 0 0 1-1.462-1.462 3.67 3.67 0 0 1-.233-1.213c-.024-.534-.03-.704-.03-2.062s.006-1.528.03-2.062a3.67 3.67 0 0 1 .232-1.213 2.556 2.556 0 0 1 1.463-1.463 3.67 3.67 0 0 1 1.213-.232c.534-.024.704-.03 2.062-.03s1.528.006 2.062.03a3.67 3.67 0 0 1 1.213.232 2.556 2.556 0 0 1 1.462 1.463 3.67 3.67 0 0 1 .233 1.213c.024.534.03.704.03 2.062s-.006 1.528-.03 2.062z">
-            </path>
-          </g>
-        </svg>
-        <svg class="svg-img" fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 97.75 97.75" xml:space="preserve">
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-          <g id="SVGRepo_iconCarrier">
-            <g>
-              <path
-                d="M48.875,0C21.882,0,0,21.882,0,48.875S21.882,97.75,48.875,97.75S97.75,75.868,97.75,48.875S75.868,0,48.875,0z M30.562,81.966h-13.74V37.758h13.74V81.966z M23.695,31.715c-4.404,0-7.969-3.57-7.969-7.968c0.001-4.394,3.565-7.964,7.969-7.964 c4.392,0,7.962,3.57,7.962,7.964C31.657,28.146,28.086,31.715,23.695,31.715z M82.023,81.966H68.294V60.467 c0-5.127-0.095-11.721-7.142-11.721c-7.146,0-8.245,5.584-8.245,11.35v21.869H39.179V37.758h13.178v6.041h0.185 c1.835-3.476,6.315-7.14,13-7.14c13.913,0,16.481,9.156,16.481,21.059V81.966z">
-              </path>
-            </g>
-          </g>
-        </svg>
+        <!-- Redes sociales usando Bootstrap Icons -->
+        <div class="d-flex gap-3 align-items-center justify-content-center justify-content-md-start">
+          <a href="#" class="text-white fs-2 text-decoration-none social-icon" aria-label="Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="#" class="text-white fs-2 text-decoration-none social-icon" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="#" class="text-white fs-2 text-decoration-none social-icon" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
       </div>
+
     </div>
     <hr class="border-secondary my-4">
     <p class="text-center small m-0">© 2026 Veterinaria La Mary – UNER FCAD. Todos los derechos reservados.</p>

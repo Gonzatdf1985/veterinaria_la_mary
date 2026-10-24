@@ -62,8 +62,12 @@ h3 {
 }
 
 
-
-
+.social-icon {
+  transition: all .3s ease;
+}
+.social-icon:hover {
+  transform: translateY(-5px);
+}
 .menu__logo {
   height: 50px;
   width: auto;
