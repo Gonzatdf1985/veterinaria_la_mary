@@ -70,15 +70,17 @@
       <fieldset>
         <legend>Formulario Mascota</legend>
         <div>
-          <label for="mascota" class="form-label small fw-semibold text-secondary d-flex align-items-center gap-1">
-            <i class="bi bi-hearts text-muted"></i> Mascota
+          <label for="mascota" class="form-label small fw-semibold d-flex align-items-center gap-2">
+            <i class="bi bi-heart-pulse text-muted fs-2"></i>
+            Mascota
           </label>
           <input type="text" name="mascota" id="mascota" class="form-control " required placeholder="Ej: Firulais">
         </div>
         <div>
-          <label for="veterinario" class="form-label small fw-semibold text-secondary d-flex align-items-center gap-1">
-            <i class="bi bi-person-badge text-muted"></i> Veterinario
-          </label>
+        <label for="veterinario" class="form-label small fw-semibold d-flex align-items-center gap-2">
+          <i class="bi bi-person-badge text-muted fs-2"></i>
+          Veterinario
+        </label>
           <select name="veterinario" id="veterinario" class="form-select">
             <option selected disabled>Seleccione un profesional...</option>
             <option value="Juan Pepe">Juan Pepe</option>
@@ -87,15 +89,16 @@
 
         </div>
         <div>
-          <label for="fechaHora" class="form-label small fw-semibold text-secondary d-flex align-items-center gap-1">
-            <i class="bi bi-calendar-event text-muted"></i> Fecha y Hora
+          <label for="fechaHora" class="form-label small fw-semibold d-flex align-items-center gap-2">
+            <i class="bi bi-clock-history text-muted fs-2"></i>
+            Fecha y hora de atención
           </label>
           <input type="datetime-local" name="fechaHora" id="fechaHora" class="form-control" required>
         </div>
         <div>
-          <label for="observaciones"
-            class="form-label small fw-semibold text-secondary d-flex align-items-center gap-1">
-            <i class="bi bi-clipboard2-pulse text-muted"></i> Observaciones
+          <label for="observaciones" class="form-label small fw-semibold d-flex align-items-center gap-2">
+            <i class="bi bi-clipboard2-pulse text-muted fs-2"></i>
+            Observaciones clínicas
           </label>
           <textarea name="observaciones" id="observaciones" rows="4" class="form-control" required
             placeholder="Detalle la consulta, diagnóstico o tratamiento..."></textarea>
