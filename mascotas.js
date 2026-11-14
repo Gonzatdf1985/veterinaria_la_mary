@@ -1,3 +1,6 @@
+if (localStorage.getItem("sesion") !== "activa") {
+  window.location.href = "./login.html";
+};
 // Clave propia de la entidad en LocalStorage
 const CLAVE_MASCOTAS = "mascotas";
 

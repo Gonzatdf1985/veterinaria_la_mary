@@ -1,6 +1,6 @@
-if (typeof estaLogueado === 'function' && !estaLogueado()) {
-    window.location.href = 'login.html';
-}
+if (localStorage.getItem("sesion") !== "activa") {
+    window.location.href = "./login.html";
+};
 
 const veterinarios = JSON.parse(localStorage.getItem('veterinarios')) || [];
 
@@ -116,7 +116,7 @@ formulario.addEventListener('submit', (evento) => {
 
     veterinarios.push(nuevoVeterinario);
     guardarEnLocalStorage();
-    
+
     if (inputBuscador) inputBuscador.value = '';
     render();
     formulario.reset();
@@ -135,7 +135,7 @@ formularioEditar.addEventListener('submit', (e) => {
             vet.especializacion = datos.get('editarEspecializacion');
             vet.valorConsulta = parseFloat(datos.get('editarValorConsulta'));
 
-            guardarEnLocalStorage();    
+            guardarEnLocalStorage();
             render();
             modalEditar.hide();
             idVeterinarioEditar = undefined;
