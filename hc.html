@@ -14,187 +14,203 @@
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/style.css">
 
-  <title>Nómina de Veterinarios - Veterinaria La Mary</title>
+  <title>Historias Clinicas - Veterinaria La Mary</title>
 
-  <script defer src="./sesion.js"></script>
+ 
   <script defer src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script defer src="./hc.js"></script>
 </head>
 
 <body>
   <main>
-  
-     
-<section class="card border-0 shadow-sm mb-5">
-  <div class="card-body p-4">
 
-    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+    <!-- titulo y texto secundario -->
+    <section class="card border-0 shadow-sm mb-5">
+      <div class="card-body p-4">
 
-      <div class="d-flex align-items-center gap-3">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
 
-        <div class="bg-success-subtle rounded-circle p-3">
-          <i class="bi bi-journal-medical fs-1 text-secondary"></i>
-        </div>
+          <div class="d-flex align-items-center gap-3">
 
-        <div>
-          <h1 class="display-6 fw-bold mb-1" style="color: var(--color-acent-secundary);">
-            Historias Clínicas de Mascotas
-          </h1>
+            <div class="bg-success-subtle rounded-circle p-3">
+              <i class="bi bi-journal-medical fs-1 text-secondary"></i>
+            </div>
 
-          <p class="text-muted mb-0">
-            Registro y seguimiento de consultas, diagnósticos,
-            tratamientos y evolución médica de las mascotas.
-          </p>
+            <div>
+              <h1 class="display-6 fw-bold mb-1" style="color: var(--color-acent-secundary);">
+                Historias Clínicas de Mascotas
+              </h1>
+
+              <p class="text-muted mb-0">
+                Registro y seguimiento de consultas, diagnósticos,
+                tratamientos y evolución médica de las mascotas.
+              </p>
+            </div>
+
+          </div>
+
+          <a href="./admin.html" class="btn btn-warning shadow-sm fw-semibold">
+            <i class="bi bi-arrow-left me-2"></i>
+            Volver al Panel
+          </a>
+
         </div>
 
       </div>
+    </section>
+    <!-- fin de titulo y texto secundario -->
+    <div class="container">
+      <div class="row gy-4">
 
-      <a href="./admin.html" class="btn btn-warning shadow-sm fw-semibold">
-        <i class="bi bi-arrow-left me-2"></i>
-        Volver al Panel
-      </a>
+        <article class="col-12 col-lg-6">
+          <div class="card bg-white rounded shadow-sm">
+
+
+            <form action="#" class="p-3" id="formularioHistoriasClinicas">
+
+              <fieldset>
+                <legend>Formulario Mascota</legend>
+
+                <div>
+                  <label for="mascota" class="form-label fs-6 fw-semibold d-flex align-items-center gap-2">
+                    <i class="bi bi-heart-pulse text-muted fs-2"></i>
+                    Mascota
+                  </label>
+                  <input type="text" name="mascota" id="mascota" class="form-control " required
+                    placeholder="Ej: Firulais">
+                </div>
+                <div>
+                  <label for="veterinario" class="form-label fs-6 fw-semibold d-flex align-items-center gap-2">
+                    <i class="bi bi-person-badge text-muted fs-2"></i>
+                    Veterinario
+                  </label>
+                  <select name="veterinario" id="veterinario" class="form-select">
+                    <option selected disabled>Seleccione un profesional...</option>
+                    <option value="alexis arismendi">Dr. Alexis Arismendi</option>
+                    <option value="gaston fidalgo">Dr. Gastón Fidalgo</option>
+                    <option value="silvana detzel">Dra. Silvana Detzel</option>
+                    <option value="fabricio diaz">Dr. Fabricio Diaz</option>
+                  </select>
+
+                </div>
+                <div>
+                  <label for="fechaHora" class="form-label fs-6 fw-semibold  d-flex align-items-center gap-2">
+                    <i class="bi bi-clock-history text-muted fs-2"></i>
+                    Fecha y hora de atención
+                  </label>
+                  <input type="datetime-local" name="fechaHora" id="fechaHora" class="form-control" required>
+                </div>
+                <div>
+                  <label for="observaciones" class="form-label fs-6 fw-semibold  d-flex align-items-center gap-2">
+                    <i class="bi bi-clipboard2-pulse text-muted fs-2"></i>
+                    Observaciones clínicas
+                  </label>
+                  <textarea name="observaciones" id="observaciones" rows="4" class="form-control" required
+                    placeholder="Detalle la consulta, diagnóstico o tratamiento..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 mt-4">Agregar Datos</button>
+              </fieldset>
+
+            </form>
+          </div>
+        </article>
+        <article class="col-12 col-lg-6">
+
+          <div class="card rounded bg-white shadow-sm">
+            <div class="d-flex justify-content-between p-3">
+              <span class="badge text-bg-primary">Historia Clinica</span>
+
+              <span class="badge text-bg-secondary" id="totalHistoriasClinicas">0</span>
+            </div>
+            <table class="table table-striped table-sm">
+
+              <thead>
+                <tr>
+                  <th>Mascota</th>
+                  <th>Veterinario</th>
+                  <th>Fecha/Hora</th>
+                  <th>Observaciones</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="filaHistoriasClinicas" class="table-group-divider">
+                <!-- rellenado dinamicamente -->
+              </tbody>
+            </table>
+            <!-- </div> -->
+
+        </article>
+      </div>
+
+
+
 
     </div>
-
-  </div>
-</section>
-
-<div class="container">
-<div class="row">
-  <article class="col-12 col-lg-6">
-    <span class="badge text-bg-primary">Historia Clinica</span>
-    <h3>Nueva Evolución</h3>
-    <span class="badge text-bg-secondary" id="totalHistoriasClinicas">0</span>
-
-    <form action="#" class="bg-body-secondary p-3" id="formularioHistoriasClinicas">
-      <fieldset>
-        <legend>Formulario Mascota</legend>
-        <div>
-          <label for="mascota" class="form-label small fw-semibold d-flex align-items-center gap-2">
-            <i class="bi bi-heart-pulse text-muted fs-2"></i>
-            Mascota
-          </label>
-          <input type="text" name="mascota" id="mascota" class="form-control " required placeholder="Ej: Firulais">
-        </div>
-        <div>
-        <label for="veterinario" class="form-label small fw-semibold d-flex align-items-center gap-2">
-          <i class="bi bi-person-badge text-muted fs-2"></i>
-          Veterinario
-        </label>
-          <select name="veterinario" id="veterinario" class="form-select">
-            <option selected disabled>Seleccione un profesional...</option>
-            <option value="Juan Pepe">Juan Pepe</option>
-            <option value="Estela Ponce">Estela Ponce</option>
-          </select>
-
-        </div>
-        <div>
-          <label for="fechaHora" class="form-label small fw-semibold d-flex align-items-center gap-2">
-            <i class="bi bi-clock-history text-muted fs-2"></i>
-            Fecha y hora de atención
-          </label>
-          <input type="datetime-local" name="fechaHora" id="fechaHora" class="form-control" required>
-        </div>
-        <div>
-          <label for="observaciones" class="form-label small fw-semibold d-flex align-items-center gap-2">
-            <i class="bi bi-clipboard2-pulse text-muted fs-2"></i>
-            Observaciones clínicas
-          </label>
-          <textarea name="observaciones" id="observaciones" rows="4" class="form-control" required
-            placeholder="Detalle la consulta, diagnóstico o tratamiento..."></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary w-100 mt-4">Agregar Mascota</button>
-      </fieldset>
-
-    </form>
-  </article>
-  <article class="col-12 col-lg-6">
-
-    <table class="table table-striped table-sm">
-      <thead>
-        <tr>
-          <th>Mascota</th>
-          <th>Veterinario</th>
-          <th>Fecha/Hora</th>
-          <th>Observaciones</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody id="filaHistoriasClinicas" class="table-group-divider">
-        <!-- rellenado dinamicamente -->
-      </tbody>
-    </table>
-    <!-- </div> -->
-
-  </article>
-
-
-
-</div>
-</div>
-<!-- ventana modal -->
-<div class="modal" tabindex="-1" id="modal-editar">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form action="#" class="bg-body-secondary p-3" id="formularioEditarHistoriasClinicas">
-          <fieldset>
-            <legend>Editar Historia Clinica</legend>
-            <div>
-              <label for="editarMascota"
-                class="form-label small fw-semibold text-secondary d-flex align-items-center gap-1">
-                <i class="bi bi-hearts text-muted"></i> Mascota
-              </label>
-              <input type="text" name="editarMascota" id="editarMascota" class="form-control " required
-                placeholder="Ej: Firulais">
-            </div>
-            <div>
-              <label for="editarVeterinario"
-                class="form-label small fw-semibold text-secondary d-flex align-items-center gap-1">
-                <i class="bi bi-person-badge text-muted"></i> Veterinario
-              </label>
-              <select name="editarVeterinario" id="editarVeterinario" class="form-select">
-                <option selected disabled>Seleccione un profesional...</option>
-                <option value="Juan Pepe">Juan Pepe</option>
-                <option value="Estela Ponce">Estela Ponce</option>
-              </select>
-            </div>
-            <div>
-              <label for="editarFechaHora"
-                class="form-label small fw-semibold text-secondary d-flex align-items-center gap-1">
-                <i class="bi bi-calendar-event text-muted"></i> Fecha y Hora
-              </label>
-              <input type="datetime-local" name="editarFechaHora" id="editarFechaHora" class="form-control" required>
-            </div>
-            <div>
-              <label for="editarObservaciones"
-                class="form-label small fw-semibold text-secondary d-flex align-items-center gap-1">
-                <i class="bi bi-clipboard2-pulse text-muted"></i> Observaciones
-              </label>
-              <textarea name="editarObservaciones" id="editarObservaciones" rows="4" class="form-control" required
-                placeholder="Detalle la consulta, diagnóstico o tratamiento..."></textarea>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <button type="submit" class="btn btn-success">Guardar Cambios</button>
-            </div>
-          </fieldset>
-
-        </form>
-      </div>
-
     </div>
-  </div>
-</div>
+    <!-- ventana modal -->
+    <div class="modal" tabindex="-1" id="modal-editar">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="#" class="bg-body-secondary p-3" id="formularioEditarHistoriasClinicas">
+              <fieldset>
+                <legend>Editar Historia Clinica</legend>
+                <div>
+                  <label for="editarMascota"
+                    class="form-label small fw-semibold text-secondary d-flex align-items-center gap-1">
+                    <i class="bi bi-hearts text-muted"></i> Mascota
+                  </label>
+                  <input type="text" name="editarMascota" id="editarMascota" class="form-control " required
+                    placeholder="Ej: Firulais">
+                </div>
+                <div>
+                  <label for="editarVeterinario"
+                    class="form-label small fw-semibold text-secondary d-flex align-items-center gap-1">
+                    <i class="bi bi-person-badge text-muted"></i> Veterinario
+                  </label>
+                  <select name="editarVeterinario" id="editarVeterinario" class="form-select">
+                    <option selected disabled>Seleccione un profesional...</option>
+                    <option value="Juan Pepe">Juan Pepe</option>
+                    <option value="Estela Ponce">Estela Ponce</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="editarFechaHora"
+                    class="form-label small fw-semibold text-secondary d-flex align-items-center gap-1">
+                    <i class="bi bi-calendar-event text-muted"></i> Fecha y Hora
+                  </label>
+                  <input type="datetime-local" name="editarFechaHora" id="editarFechaHora" class="form-control"
+                    required>
+                </div>
+                <div>
+                  <label for="editarObservaciones"
+                    class="form-label small fw-semibold text-secondary d-flex align-items-center gap-1">
+                    <i class="bi bi-clipboard2-pulse text-muted"></i> Observaciones
+                  </label>
+                  <textarea name="editarObservaciones" id="editarObservaciones" rows="4" class="form-control" required
+                    placeholder="Detalle la consulta, diagnóstico o tratamiento..."></textarea>
+                </div>
 
-<!-- fin de modal -->
-</div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="submit" class="btn btn-success">Guardar Cambios</button>
+                </div>
+              </fieldset>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- fin de modal -->
+    </div>
 
   </main>
 
