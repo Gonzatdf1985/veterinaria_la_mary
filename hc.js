@@ -1,5 +1,5 @@
-if (typeof estaLogueado === 'function' && !estaLogueado()) {
-  window.location.href = 'login.html';
+if (localStorage.getItem("sesion") !== "activa") {
+  window.location.href = "./login.html";
 }
 
 const historias = JSON.parse(localStorage.getItem('hc')) || [];
