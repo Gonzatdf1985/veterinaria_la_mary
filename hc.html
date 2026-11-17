@@ -100,6 +100,27 @@
                   </label>
                   <input type="datetime-local" name="fechaHora" id="fechaHora" class="form-control" required>
                 </div>
+                  <div class="mb-3">
+                    <label for="peso" class="form-label fs-6 fw-semibold d-flex align-items-center gap-2">
+                      <i class="bi bi-speedometer2 text-muted fs-2"></i> Peso (kg)
+                    </label>
+                    <input type="number" step="0.01" name="peso" id="peso" class="form-control" required placeholder="Ej: 14.5">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="temperatura" class="form-label fs-6 fw-semibold  d-flex align-items-center gap-2">
+                      <i class="bi bi-thermometer-half text-muted fs-2"></i> Temperatura (°C)
+                    </label>
+                    <input type="number" step="0.1" name="temperatura" id="temperatura" class="form-control" required
+                      placeholder="Ej: 38.5">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="proximoControl" class="form-label fs-6 fw-semibold d-flex align-items-center gap-2">
+                      <i class="bi bi-calendar-check text-muted fs-2"></i> Próximo Control
+                    </label>
+                    <input type="date" name="proximoControl" id="proximoControl" class="form-control" required>
+                  </div>
                 <div>
                   <label for="observaciones" class="form-label fs-6 fw-semibold  d-flex align-items-center gap-2">
                     <i class="bi bi-clipboard2-pulse text-muted fs-2"></i>
@@ -116,6 +137,10 @@
           </div>
         </article>
         <article class="col-12 col-lg-6">
+          <div class="input-group mt-3">
+            <i class="bi bi-search input-group-text fs-2"></i>
+            <input type="search" class="form-control" placeholder="Buscar Mascota, veterinario ..." id="buscarMascota">
+          </div>
           <div class="d-flex justify-content-between">
             <span class="badge text-bg-primary">Historia Clinica</span>
 
@@ -131,6 +156,9 @@
                   <th>Mascota</th>
                   <th>Veterinario</th>
                   <th>Fecha/Hora</th>
+                  <th>Peso</th>
+                  <th>Temp.</th>
+                  <th>Control</th>
                   <th>Observaciones</th>
                   <th>Acciones</th>
                 </tr>
@@ -189,6 +217,28 @@
                   </label>
                   <input type="datetime-local" name="editarFechaHora" id="editarFechaHora" class="form-control"
                     required>
+                </div>
+                <div class="mb-3">
+                  <label for="editarPeso" class="form-label small fw-semibold text-secondary d-flex align-items-center gap-1">
+                    <i class="bi bi-speedometer2 text-muted"></i> Peso (kg)
+                  </label>
+                  <input type="number" step="0.01" name="editarPeso" id="editarPeso" class="form-control" required
+                    placeholder="Ej: 14.5">
+                </div>
+                
+                <div class="mb-3">
+                  <label for="editarTemperatura" class="form-label small fw-semibold text-secondary d-flex align-items-center gap-1">
+                    <i class="bi bi-thermometer-half text-muted"></i> Temperatura (°C)
+                  </label>
+                  <input type="number" step="0.1" name="editarTemperatura" id="editarTemperatura" class="form-control" required
+                    placeholder="Ej: 38.5">
+                </div>
+                
+                <div class="mb-3">
+                  <label for="editarProximoControl" class="form-label small fw-semibold text-secondary d-flex align-items-center gap-1">
+                    <i class="bi bi-calendar-check text-muted"></i> Próximo Control
+                  </label>
+                  <input type="date" name="editarProximoControl" id="editarProximoControl" class="form-control" required>
                 </div>
                 <div>
                   <label for="editarObservaciones"

@@ -10,6 +10,8 @@ const total = document.getElementById('totalHistoriasClinicas');
 
 const formulario = document.getElementById('formularioHistoriasClinicas');
 
+const buscador = document.getElementById('buscarMascota');
+
 const formularioEditar = document.getElementById('formularioEditarHistoriasClinicas');
 
 const modalEditar = new bootstrap.Modal(document.getElementById('modal-editar'));
@@ -34,21 +36,27 @@ function editarHistoriaClinica(id) {
   document.getElementById('editarMascota').value = historiaClinica.mascota;
   document.getElementById('editarVeterinario').value = historiaClinica.veterinario;
   document.getElementById('editarFechaHora').value = historiaClinica.fechaHora;
+  document.getElementById('editarPeso').value = historiaClinica.peso;
+  document.getElementById('editarTemperatura').value = historiaClinica.temperatura;
+  document.getElementById('editarProximoControl').value = historiaClinica.proximoControl;
   document.getElementById('editarObservaciones').value = historiaClinica.observaciones;
   modalEditar.show();
 }
 
 // funcion para cargar los datos al entrar en la web
-function render() {
+function render(hcRenderizado=historias) {
   //limpiar la tabla , si hay datos previos no se dupliquen
   listadoHistoriaClinicas.innerHTML = '';
-  historias.forEach((hc) => {
+  hcRenderizado.forEach((hc) => {
 
     listadoHistoriaClinicas.innerHTML += `
         <tr>
           <td>${hc.mascota} </td>
           <td>${hc.veterinario}</td>
           <td>${hc.fechaHora}</td>
+          <td>${hc.peso}</td>
+          <td>${hc.temperatura}</td>
+          <td>${hc.proximoControl}</td>
           <td>${hc.observaciones}</td>
           <td><div class="d-flex gap-2">
         <button class="btn btn-outline-danger btn-sm" onclick="eliminarHistoriaClinica('${hc.idHistoriaClinica}')">Eliminar</button>
@@ -57,7 +65,7 @@ function render() {
         </tr>
     `
   });
-  total.textContent = historias.length;
+  total.textContent = hcRenderizado.length;
 };
 
 function guardarEnLocalStorage() {
@@ -76,6 +84,9 @@ formulario.addEventListener('submit', (evento) => {
     mascota: datos.get('mascota').trim(),
     veterinario: datos.get('veterinario').trim(),
     fechaHora: datos.get('fechaHora').trim(),
+    peso: parseFloat(datos.get('peso').trim()),
+    temperatura: parseFloat(datos.get('temperatura').trim()),
+    proximoControl: datos.get('proximoControl').trim(),
     observaciones: datos.get('observaciones').trim()
 
   };
@@ -101,6 +112,9 @@ formularioEditar.addEventListener('submit', (e) => {
     hc.mascota = data.get('editarMascota').trim();
     hc.veterinario = data.get('editarVeterinario').trim();
     hc.fechaHora = data.get('editarFechaHora').trim();
+    hc.peso = data.get('editarPeso').trim();
+    hc.temperatura = data.get('editarTemperatura').trim();
+    hc.proximoControl = data.get('editarProximoControl').trim();
     hc.observaciones = data.get('editarObservaciones').trim();
 
     guardarEnLocalStorage();
@@ -113,3 +127,15 @@ formularioEditar.addEventListener('submit', (e) => {
   };
 });
 
+if (buscador) {
+  buscador.addEventListener('input', evento => {
+    const datoBuscado = evento.target.value.toLowerCase().trim();
+
+    const hcFiltradas = historias.filter(hc => {
+      const mascotaCoincidente = hc.mascota.toLowerCase().includes(datoBuscado);
+      const vetCoincidente = hc.veterinario.toLowerCase().includes(datoBuscado);
+      return mascotaCoincidente || vetCoincidente;
+    });
+    render(hcFiltradas)
+  });
+};
