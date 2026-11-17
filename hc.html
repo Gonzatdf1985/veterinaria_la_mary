@@ -62,7 +62,7 @@
     <div class="container">
       <div class="row gy-4">
 
-        <article class="col-12 col-lg-6">
+        <article class="col-12 col-lg-4">
           <div class="card bg-white rounded shadow-sm">
 
 
@@ -73,18 +73,18 @@
 
                 <div>
                   <label for="mascota" class="form-label fs-6 fw-semibold d-flex align-items-center gap-2">
-                    <i class="bi bi-heart-pulse text-muted fs-2"></i>
+                    <i class="bi bi-heart-pulse text-muted fs-4"></i>
                     Mascota
                   </label>
                   <input type="text" name="mascota" id="mascota" class="form-control " required
-                    placeholder="Ej: Firulais">
+                    placeholder="Ej: Firulais" minlength="2" maxlength="30">
                 </div>
                 <div>
                   <label for="veterinario" class="form-label fs-6 fw-semibold d-flex align-items-center gap-2">
-                    <i class="bi bi-person-badge text-muted fs-2"></i>
+                    <i class="bi bi-person-badge text-muted fs-4"></i>
                     Veterinario
                   </label>
-                  <select name="veterinario" id="veterinario" class="form-select">
+                  <select name="veterinario" id="veterinario" class="form-select" required>
                     <option selected disabled>Seleccione un profesional...</option>
                     <option value="alexis arismendi">Dr. Alexis Arismendi</option>
                     <option value="gaston fidalgo">Dr. Gastón Fidalgo</option>
@@ -95,78 +95,83 @@
                 </div>
                 <div>
                   <label for="fechaHora" class="form-label fs-6 fw-semibold  d-flex align-items-center gap-2">
-                    <i class="bi bi-clock-history text-muted fs-2"></i>
+                    <i class="bi bi-clock-history text-muted fs-4"></i>
                     Fecha y hora de atención
                   </label>
                   <input type="datetime-local" name="fechaHora" id="fechaHora" class="form-control" required>
                 </div>
                   <div class="mb-3">
                     <label for="peso" class="form-label fs-6 fw-semibold d-flex align-items-center gap-2">
-                      <i class="bi bi-speedometer2 text-muted fs-2"></i> Peso (kg)
+                      <i class="bi bi-calculator text-muted fs-4"></i> Peso (kg)
                     </label>
                     <input type="number" step="0.01" name="peso" id="peso" class="form-control" required placeholder="Ej: 14.5">
                   </div>
                   
                   <div class="mb-3">
                     <label for="temperatura" class="form-label fs-6 fw-semibold  d-flex align-items-center gap-2">
-                      <i class="bi bi-thermometer-half text-muted fs-2"></i> Temperatura (°C)
+                      <i class="bi bi-thermometer-half text-muted fs-4"></i> Temperatura (°C)
                     </label>
-                    <input type="number" step="0.1" name="temperatura" id="temperatura" class="form-control" required
+                    <input type="number" step="0.1" name="temperatura" id="temperatura" class="form-control" min=30 max=45 required
                       placeholder="Ej: 38.5">
                   </div>
                   
                   <div class="mb-3">
                     <label for="proximoControl" class="form-label fs-6 fw-semibold d-flex align-items-center gap-2">
-                      <i class="bi bi-calendar-check text-muted fs-2"></i> Próximo Control
+                      <i class="bi bi-calendar-check text-muted fs-4"></i> Próximo Control
                     </label>
                     <input type="date" name="proximoControl" id="proximoControl" class="form-control" required>
                   </div>
                 <div>
                   <label for="observaciones" class="form-label fs-6 fw-semibold  d-flex align-items-center gap-2">
-                    <i class="bi bi-clipboard2-pulse text-muted fs-2"></i>
+                    <i class="bi bi-clipboard2-pulse text-muted fs-4"></i>
                     Observaciones clínicas
                   </label>
-                  <textarea name="observaciones" id="observaciones" rows="4" class="form-control" required
+                  <textarea name="observaciones" id="observaciones" rows="3" class="form-control" required
                     placeholder="Detalle la consulta, diagnóstico o tratamiento..."></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary w-100 mt-4">Agregar Datos</button>
+                <button type="submit" class="boton btn btn-primary w-100 mt-4 py-2">
+                  <i class="bi bi-floppy"></i>
+                  Agregar Datos</button>
               </fieldset>
 
             </form>
           </div>
         </article>
-        <article class="col-12 col-lg-6">
-          <div class="input-group mt-3">
-            <i class="bi bi-search input-group-text fs-2"></i>
+        <article class="col-12 col-lg-8">
+          <div class="input-group  mb-3">
+            <i class="bi bi-search input-group-text fs-3"></i>
             <input type="search" class="form-control" placeholder="Buscar Mascota, veterinario ..." id="buscarMascota">
           </div>
-          <div class="d-flex justify-content-between">
-            <span class="badge text-bg-primary">Historia Clinica</span>
+         
 
-            <span class="badge text-bg-secondary" id="totalHistoriasClinicas">0</span>
+          <div class="card rounded bg-white shadow-sm p-3">
+             <div class="d-flex justify-content-between">
+            <span class="badge text-bg-warning">Historia Clinica</span>
+
+            <span class="badge text-bg-warning" id="totalHistoriasClinicas">0</span>
           </div>
-
-          <div class="card rounded bg-white shadow-sm">
-
-            <table class="table table-striped table-sm table-responsive">
-
-              <thead>
-                <tr>
-                  <th>Mascota</th>
-                  <th>Veterinario</th>
-                  <th>Fecha/Hora</th>
-                  <th>Peso</th>
-                  <th>Temp.</th>
-                  <th>Control</th>
-                  <th>Observaciones</th>
-                  <th>Acciones</th>
-                </tr>
-              </thead>
-              <tbody id="filaHistoriasClinicas" class="table-group-divider">
-                <!-- rellenado dinamicamente -->
-              </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-striped table-sm">
+                
+                  <thead>
+                    <tr>
+                      <th>Mascota</th>
+                      <th>Veterinario</th>
+                      <th>Fecha/Hora</th>
+                      <th>Peso</th>
+                      <th>Temp.</th>
+                      <th>Control</th>
+                      <th>Observaciones</th>
+                      <th>Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody id="filaHistoriasClinicas" class="table-group-divider">
+                    <!-- rellenado dinamicamente -->
+                  </tbody>
+                </table>
+            </div>
+           
           </div>
           <!-- </div> -->
 
